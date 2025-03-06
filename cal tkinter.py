@@ -1,0 +1,23 @@
+#program to calc using Tkinter GUI
+from tkinter import*
+x=Tk()
+x.title("calculation report")
+x.geometry("500x300")
+L1=Label(x,text="Number1:",fg="blue",font=("arial",16))
+L1.grid(row=0,column=0,padx=5,pady=5)
+L2=Label(x,text="Number2:",fg="blue",font=("arial",16))
+L2.grid(row=1,column=0,padx=5,pady=5)
+a=IntVar()
+b=IntVar()
+T1=Entry(x,textvariable=a,font=("arial",18,"bold"))
+T1.grid(row=0,column=1)
+T2=Entry(x,textvariable=b,font=("arial",18,"bold"))
+T2.grid(row=1,column=1)
+def add_fun():
+    z=a.get()+b.get()
+    Result.config(text="addition is:"+str(z))
+B1=Button(x,text="addition",command=add_fun,fg="darkred",font=("futura",20,"bold"))
+B1.grid(row=5,column=1)
+Result=Label(x,bg="yellow",fg="blue",font=("arial",20,"bold"))
+Result.grid(row=6,column=2)
+x.mainloop()

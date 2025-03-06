@@ -1,0 +1,10 @@
+import marks as m
+a=input('enter')
+m1=int(input('enter'))
+m2=int(input('enter'))
+m3=int(input('enter'))
+x=m.marks_class()
+total=x.f1(m1,m2,m3)
+c=x.f2(m1,m2,m3)
+print(total)
+print(c)
